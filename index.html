@@ -267,7 +267,7 @@ function drawMeme(D){
   const ear=Math.hypot(le.x-re.x,le.y-re.y);
   const shw=Math.hypot(sh1.x-sh2.x,sh1.y-sh2.y);
   const faceW=Math.max(ear, shw*0.45);
-  const target={x:nose.x, y:nose.y-faceW*0.12, s:faceW*2.3, a:Math.atan2(le.y-re.y, le.x-re.x)};
+  const target={x:nose.x, y:nose.y-faceW*0.12, s:faceW*2.3, a:Math.atan2(re.y-le.y, re.x-le.x)};
   if(!sm.init){ sm={...target,init:true}; }
   else{ sm.x=lerp(sm.x,target.x,.5); sm.y=lerp(sm.y,target.y,.5); sm.s=lerp(sm.s,target.s,.4); sm.a=lerp(sm.a,target.a,.4); }
   // snappy overshoot pop-in
